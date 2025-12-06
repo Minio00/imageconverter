@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Konwersja obrazów WebP/AVIF - converter.vilapolska.pl</title>
+<meta name="description" content="Konwertuj swoje zdjęcia do WebP lub AVIF online na converter.vilapolska.pl z paskiem postępu i miniaturką.">
+<meta name="keywords" content="webp,avif,konwersja,obraz,zdjęcia,online,converter.vilapolska.pl">
+<meta name="author" content="Dominik Pomykała">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<!-- JSON-LD dla Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Konwersja obrazów WebP/AVIF",
+  "url": "https://converter.vilapolska.pl/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://converter.vilapolska.pl/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+    <h1>Konwersja obrazów WebP/AVIF online</h1>
+
+    <div class="upload-section">
+        <input type="file" id="files" multiple>
+        <select id="format">
+            <option value="webp">WebP</option>
+            <option value="avif">AVIF</option>
+        </select>
+        <button id="uploadBtn">Wyślij i konwertuj</button>
+    </div>
+
+    <h2>Twoje pliki (ważne do 30 minut):</h2>
+    <div id="userFiles"></div>
+<div id="gallery-wrapper">
+    <h2>Twoje przekonwertowane pliki</h2>
+    <div id="gallery"></div>
+
+    <div class="pagination">
+        <button id="prevPage">Poprzednia</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Następna</button>
+    </div>
+</div>
+
+    <h2>Postęp konwersji:</h2>
+    <div id="results"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
